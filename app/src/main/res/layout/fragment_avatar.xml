@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.register.AvatarFragment"
+    tools:background="@drawable/gradient">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivAvatar"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/placeholder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_up_avatar"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_below="@id/ivAvatar"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/take_photo"
+            android:layout_alignParentBottom="true"
+            app:backgroundTint="@color/colorDead"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGallery"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="0.5"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/gallery"
+            android:layout_alignParentBottom="true"
+            app:backgroundTint="@color/colorDead"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="16dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/avatar_warning"
+        android:textColor="@color/colorWhite"
+        android:textSize="14dp"
+        android:layout_below="@id/llButtons"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/register"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/colorDead"
+        app:cornerRadius="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"/>
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/pbLogin"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:elevation="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/btnNext"
+        android:layout_alignBottom="@+id/btnNext"/>
+
+</RelativeLayout>

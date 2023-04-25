@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.profile.MyDoersActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            app:title="@string/check_doers"
+            app:titleTextAppearance="@style/TextAllCaps"
+            app:titleTextColor="@color/colorWhite"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <ImageView
+                android:id="@+id/ivHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_help" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <RelativeLayout
+                android:id="@+id/rlJob"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false">
+
+                <ImageView
+                    android:id="@+id/ivJobImage"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:src="@drawable/gradient" />
+
+                <TextView
+                    android:id="@+id/tvJobName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_toRightOf="@+id/ivJobImage"
+                    android:textColor="@color/colorText"
+                    android:text="Job Name"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/ivTimer"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@id/tvJobName"
+                    android:layout_alignLeft="@id/tvJobName"
+                    android:layout_toRightOf="@id/ivJobImage"
+                    android:src="@drawable/ic_timer"
+                    app:tint="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/tvJobTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvJobName"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/ivTimer"
+                    android:text="@string/time_passed"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/tvJobDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ivTimer"
+                    android:layout_alignLeft="@id/ivTimer"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@id/ivJobImage"
+                    android:layout="@id/ivJobImage"
+                    android:text="dklnsdklfs d sdjdksmfkmds"
+                    android:minHeight="24dp"
+                    android:textColor="@color/colorTextSecondary"/>
+
+
+                <TextView
+                    android:id="@+id/tvJobPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center"
+                    android:layout_marginRight="12dp"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold"
+                    android:text="500 RSD"/>
+
+                <ImageView
+                    android:id="@+id/ivJobAgreed"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/icon_jobdeal_logo_gradient"
+                    android:visibility="invisible" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlUnderbidder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlJob"
+                android:background="@color/colorOrange"
+                android:padding="16dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvUnderbidderTitle"
+                    android:text="@string/unlock_underbidders"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginEnd="8dp"
+                    android:layout_toStartOf="@+id/tvUnlock"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvUnlock"
+                    android:text="@string/unlock"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:layout_alignTop="@+id/tvUnderbidderTitle"
+                    android:layout_alignBottom="@+id/tvUnderbidderTitle"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorWhite"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/ivNoApplicants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/empty"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvApplicants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

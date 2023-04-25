@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivReportImage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_report"
+            android:tint="@color/colorGreen"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvReportTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:text="@string/report"
+            android:layout_below="@+id/ivReportImage"
+            android:textSize="16dp"/>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="144dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_flat_edit_black"
+            android:layout_below="@+id/tvReportTitle"
+            android:hint="@string/offending"
+            android:gravity="top"
+            android:padding="16dp"
+            android:id="@+id/etReport"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReport"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/report"
+            android:layout_below="@+id/etReport"
+            app:backgroundTint="@color/colorDead"
+            app:cornerRadius="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"/>
+
+        <ProgressBar
+            android:id="@+id/pbReport"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@+id/btnReport"
+            android:layout_alignBottom="@+id/btnReport"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

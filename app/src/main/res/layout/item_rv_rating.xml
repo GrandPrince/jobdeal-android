@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="16dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvJobName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Job Name"
+            android:textColor="@color/colorText"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvJobByUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvJobName"
+            android:layout_marginTop="4dp"
+            android:text="Nikola Majstorovic"
+            android:textColor="@color/colorAddress"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tvJobDoneDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvJobByUser"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/tvJobByUser"
+            android:text="22.01.2019." />
+
+        <com.willy.ratingbar.BaseRatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srb_clickable="false"
+            app:srb_drawableEmpty="@drawable/ic_star_empty"
+            app:srb_isIndicator="true"
+            app:srb_drawableFilled="@drawable/ic_star_full"
+            app:srb_numStars="5"
+            app:srb_rating="3.5"
+            app:srb_starPadding="2dp"
+            app:srb_starHeight="12dp"
+            app:srb_starWidth="12dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/tvJobByUser"
+            />
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/round_shape"
+            android:padding="6dp"
+            android:text="@string/lorem"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.register.AvatarFragment"
+    tools:background="@drawable/gradient">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_tools_green"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mostly"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_above="@id/llButtons"
+        android:layout_marginBottom="64dp"
+        android:layout_centerHorizontal="true"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/tvBuyer"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.5"
+            android:textStyle="bold"
+            android:text="@string/buyer"
+            android:textAllCaps="true"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/login_tab_selector"/>
+
+        <TextView
+            android:id="@+id/tvDoer"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="0.5"
+            android:textStyle="bold"
+            android:text="@string/doer"
+            android:textAllCaps="true"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:background="@drawable/login_tab_selector"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/role_warning"
+        android:textColor="@color/colorWhite"
+        android:textSize="14dp"
+        android:layout_below="@id/llButtons"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/register"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/colorDead"
+        app:cornerRadius="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <ProgressBar
+        android:visibility="invisible"
+        android:id="@+id/pbLogin"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:elevation="32dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/btnRegister"
+        android:layout_alignBottom="@+id/btnRegister"/>
+
+</RelativeLayout>

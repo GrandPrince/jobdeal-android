@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.filter.FilterActivity"
+    android:background="@drawable/gradient"
+    android:fitsSystemWindows="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_close"
+        app:title="@string/filter"
+        app:titleTextColor="@color/colorWhite"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetStart="0dp"
+        app:titleMargin="0dp">
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/filter_textview"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="32dp"
+        android:clipToPadding="false"
+        >
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/cvCategories"
+        android:clipToPadding="false">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/tvCategories"
+            android:text="@string/categories"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/colorText"
+            android:textSize="16dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_drop_down"
+            android:layout_gravity="right"
+            android:layout_marginRight="8dp"
+            android:tint="@color/colorText"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tvCategoriesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/cvCategories"
+            android:textColor="@color/colorWhiteTrans"
+            android:layout_below="@+id/cvCategories"
+            android:layout_alignLeft="@+id/cvCategories"
+            android:gravity="right|center_vertical"
+            android:text="3 selected"
+            android:paddingRight="8dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/rlPrice"
+            android:layout_below="@+id/cvCategories">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/price"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/tvPriceMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_alignLeft="@+id/rbPrice"
+                android:text="100 HRK"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/tvPrice"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/tvPriceMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_alignRight="@+id/rbPrice"
+                android:text="1000+ SEK"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:layout_marginRight="16dp"
+                android:layout_below="@+id/tvPrice"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/tvPriceRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:text="0 - 1000+ SEK"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/tvPrice"
+                android:textColor="@color/colorWhite"/>
+
+        <com.justraspberry.jobdeal.misc.JobDealRangeSeekbar
+            android:id="@+id/rbPrice"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_below="@+id/tvPriceMin"
+            android:layout_marginTop="4dp"
+            app:bar_color="@color/colorRangeBackground"
+            app:bar_highlight_color="@color/colorWhite"
+            app:corner_radius="30"
+            app:left_thumb_image="@drawable/ic_slider_left"
+            app:right_thumb_image="@drawable/ic_slider_right"
+            app:steps="1"
+            app:min_value="0"
+            app:max_value="1001"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:id="@+id/rlDistance"
+            android:layout_below="@+id/rlPrice">
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/distance"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/tvDistanceMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_alignLeft="@+id/rbDistance"
+                android:text="0m"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"
+                android:layout_below="@+id/tvDistance"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/tvDistanceMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_alignRight="@+id/rbDistance"
+                android:text=">100 km"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:layout_marginRight="16dp"
+                android:layout_below="@+id/tvDistance"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/tvDistanceRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:text="600m - 12km"
+                android:textSize="11dp"
+                android:textStyle="bold"
+                android:layout_below="@+id/tvDistance"
+                android:textColor="@color/colorWhite"/>
+
+            <com.justraspberry.jobdeal.misc.JobDealRangeSeekbar
+                android:id="@+id/rbDistance"
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_below="@+id/tvDistanceMin"
+                android:layout_marginTop="4dp"
+                app:bar_color="@color/colorRangeBackground"
+                app:bar_highlight_color="@color/colorWhite"
+                app:corner_radius="30"
+                app:left_thumb_image="@drawable/ic_slider_left"
+                app:right_thumb_image="@drawable/ic_slider_right"
+                app:min_value="0"
+                app:steps="100"
+                app:max_value="100000" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/tab_shape"
+            android:layout_below="@+id/rlDistance">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/smHelp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="@string/show_help_on_way"
+                android:textColor="@color/colorWhite"
+                android:layout_marginStart="16dp"
+                android:checked="true"
+                android:layout_marginEnd="8dp"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/rlHelp"
+            android:text="@string/insert_address"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_location"
+            android:drawablePadding="12dp"
+            android:paddingLeft="8dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/login_tab_selector"/>
+
+        <TextView
+            android:id="@+id/tvMyLocation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textStyle="bold"
+            android:text="@string/my_location"
+            android:textSize="16dp"
+            android:textColor="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_my_location"
+            android:drawablePadding="12dp"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tvAddress"
+            android:background="@drawable/login_tab_selector"/>
+
+        <LinearLayout
+            android:id="@+id/llLocations"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/rlDistance"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:animateLayoutChanges="true"
+            android:visibility="gone">
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWishlistDescription"
+            android:text="@string/wish_list_desc"
+            android:layout_below="@+id/tvMyLocation"
+            android:layout_margin="16dp"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:textColor="@color/colorWhiteTrans"/>
+
+        <TextView
+            android:id="@+id/tvReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnSave"
+            android:layout_centerHorizontal="true"
+            android:text="@string/reset_filters"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:textSize="14dp"
+            android:textColor="@color/colorText"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/save"
+            app:backgroundTint="@color/colorDead"
+            app:cornerRadius="8dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"/>
+
+        <ProgressBar
+            android:visibility="invisible"
+            android:id="@+id/pbFilter"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:elevation="32dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignTop="@+id/btnSave"
+            android:layout_alignBottom="@+id/btnSave"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

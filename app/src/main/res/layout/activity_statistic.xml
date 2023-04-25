@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            app:title="@string/my_statistic"
+            app:titleTextAppearance="@style/TextAllCaps"
+            app:titleTextColor="@color/colorWhite"
+            app:contentInsetStartWithNavigation="0dp">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/cvProfileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="12dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civProfilePicture"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/placeholder" />
+
+                <TextView
+                    android:id="@+id/tvUserFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/civProfilePicture"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/tvLocation"
+                android:layout_alignBottom="@+id/tvLocation"
+                android:layout_below="@id/tvUserFullName"
+                android:padding="2dp"
+                android:src="@drawable/ic_location"
+                android:tint="@color/colorText"
+                android:layout_toRightOf="@id/civProfilePicture"/>
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_toRightOf="@+id/ivLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvUserFullName"
+                    android:text="Belgrade" />
+
+                <TextView
+                    android:id="@+id/tvJoinDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvLocation"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/civProfilePicture"
+                    android:text="@string/user_since"
+                    android:textColor="@color/colorTextSecondary"
+                    android:textSize="12dp" />
+
+            </RelativeLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGreyLight"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:clipToPadding="false">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvRateAsDoer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0.5"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="12dp"
+                app:contentPadding="48dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvRatedAsDoer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/rated_as_doer"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorText"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <com.willy.ratingbar.BaseRatingBar
+                        android:id="@+id/rbDoerRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_alignTop="@+id/tvDoerRating"
+                        android:layout_alignBottom="@+id/tvDoerRating"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="true"
+                        app:srb_drawableEmpty="@drawable/ic_star_empty"
+                        app:srb_drawableFilled="@drawable/ic_star_full"
+                        app:srb_isIndicator="false"
+                        app:srb_minimumStars="0"
+                        app:srb_numStars="5"
+                        app:srb_scrollable="false"
+                        app:srb_starHeight="12dp"
+                        app:srb_starPadding="0dp"
+                        app:srb_starWidth="12dp"
+                        app:srb_stepSize="0.5" />
+
+                    <TextView
+                        android:id="@+id/tvDoerRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2.3/30"
+                        android:textSize="12dp"
+                        android:layout_below="@id/tvRatedAsDoer"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@id/rbDoerRating" />
+
+                    <TextView
+                        android:id="@+id/tvDoerJobsDone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rbDoerRating"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/colorTextSecondary"
+                        android:text="@string/jobs_done"
+                        android:layout_marginTop="8dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvDoerEarned"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvDoerJobsDone"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/colorTextSecondary"
+                        android:text="@string/earned"
+                        android:layout_marginTop="4dp"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/btnDoerNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_arrow_forward" />
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvRateAsBuyer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvProfileInfo"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0.5"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="12dp"
+                app:contentPadding="48dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvRatedAsBuyer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/rated_as_buyer"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorText"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <com.willy.ratingbar.BaseRatingBar
+                        android:id="@+id/rbBuyerRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:layout_alignTop="@+id/tvBuyerRating"
+                        android:layout_alignBottom="@+id/tvBuyerRating"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        app:srb_clearRatingEnabled="true"
+                        app:srb_clickable="true"
+                        app:srb_drawableEmpty="@drawable/ic_star_empty"
+                        app:srb_drawableFilled="@drawable/ic_star_full"
+                        app:srb_isIndicator="false"
+                        app:srb_minimumStars="0"
+                        app:srb_numStars="5"
+                        app:srb_scrollable="false"
+                        app:srb_starHeight="12dp"
+                        app:srb_starPadding="0dp"
+                        app:srb_starWidth="12dp"
+                        app:srb_stepSize="0.5" />
+
+                    <TextView
+                        android:id="@+id/tvBuyerRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        android:text="2.3/30"
+                        android:textSize="12dp"
+                        android:layout_below="@id/tvRatedAsBuyer"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@id/rbBuyerRating"/>
+
+                    <TextView
+                        android:id="@+id/tvBuyerJobsDone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rbBuyerRating"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/colorTextSecondary"
+                        android:text="@string/job_contract"
+                        android:layout_marginTop="8dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvBuyerSpent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvBuyerJobsDone"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/colorTextSecondary"
+                        android:text="@string/spent"
+                        android:layout_marginTop="4dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/btnBuyerNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_arrow_forward" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="false"
+        tools:replace="android:allowBackup,android:icon"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        android:requestLegacyExternalStorage="true">
+        <activity
+            android:name=".view.profile.ConfirmChooseActivity"
+            android:label=""
+            android:screenOrientation="behind"
+            android:theme="@style/AppThemeDialog" />
+        <activity
+            android:name=".view.profile.ImageActivity"
+            android:label=""
+            android:screenOrientation="behind"
+            android:theme="@style/AppThemeDialog" />
+        <activity
+            android:name=".view.profile.SmsVerifyActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.job.ReportActivity"
+            android:label=""
+            android:screenOrientation="behind"
+            android:theme="@style/AppThemeDialog" />
+        <activity
+            android:name=".view.login.ForgotPassActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.profile.DoerBuyerProfile"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.rate.RateActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.statistic.BuyerDoerStatisticActivity"
+            android:label=""
+            android:screenOrientation="behind"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.statistic.StatisticActivity"
+            android:label=""
+            android:screenOrientation="behind"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.job.ApplyJobActivity"
+            android:label=""
+            android:screenOrientation="behind"
+            android:theme="@style/AppThemeDialog" />
+        <activity
+            android:name=".view.doer.DoerProfileActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.terms.TermsAndConditionActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.profile.MyDoersActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.myjobs.MyJobsActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.contact.ContactUs"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity android:name=".view.profile.MyProfileActivity" />
+        <activity
+            android:name=".view.payment.PaymentActivity"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:screenOrientation="behind"
+            android:exported="true"
+            android:theme="@style/AppThemeDialog">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="jobdeal.com"
+                    android:pathPrefix="/swish"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="dev.jobdeal.com"
+                    android:pathPrefix="/api/payment/swish/"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.notification.NotificationActivity" />
+        <activity android:name=".view.bookmarks.BookmarksActivity" />
+        <activity android:name=".view.job.AddJobActivity" />
+        <activity
+            android:name=".view.payment.KlarnaActivity"
+            android:launchMode="singleInstance"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="jobdeal.com"
+                    android:pathPrefix="/api/payment/klarna"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.register.BankIdActivity"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:screenOrientation="behind"
+            android:theme="@style/AppThemeDialog" />
+        <activity
+            android:name=".view.job.JobDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.filter.MapFilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCo2eUdKWF4x2pdFAI6KtarZH-BKLb2M3A" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".view.categories.CategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTrans" />
+        <activity
+            android:name=".view.filter.FilterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTrans" />
+        <activity
+            android:name=".view.register.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTrans"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.tutorial.TutorialActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTrans"/>
+        <activity
+            android:name=".view.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTrans"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="jobdeal.com"
+                    android:pathPattern="/job/[0-9]"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".view.main.MainActivity"
+            android:label=""
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeTrans" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="General" />
+
+        <service android:name=".core.FCMService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".core.LocationService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.justraspberry.jobdeal.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

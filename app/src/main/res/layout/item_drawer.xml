@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:padding="14dp"
+            android:src="@drawable/logo_full_white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvAboutJobDeal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlLogo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="62dp"
+        android:layout_marginBottom="24dp"
+        android:padding="2dp"
+        android:text="@string/about_jobdeal"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvAboutJobDealText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAboutJobDeal"
+        android:layout_alignLeft="@id/tvAboutJobDeal"
+        android:layout_alignRight="@id/tvAboutJobDeal"
+        android:layout_marginBottom="32dp"
+        android:padding="4dp"
+        android:text="@string/lorem"
+        android:textColor="@color/colorText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ivCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAboutJobDealText"
+        android:layout_marginBottom="32dp"
+        android:padding="8dp"
+        android:src="@drawable/job_deal_coins" />
+
+    <TextView
+        android:id="@+id/tvLoginRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivCoins"
+        android:layout_alignLeft="@id/tvAboutJobDeal"
+        android:layout_alignRight="@id/tvAboutJobDeal"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:padding="2dp"
+        android:text="@string/login_register"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvContactUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLoginRegister"
+        android:layout_alignLeft="@id/tvAboutJobDeal"
+        android:layout_alignRight="@id/tvAboutJobDeal"
+        android:clickable="true"
+        android:layout_marginBottom="16dp"
+        android:padding="2dp"
+        android:text="@string/contact"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvTermsAndConditions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvContactUs"
+        android:layout_alignLeft="@id/tvAboutJobDeal"
+        android:layout_alignRight="@id/tvAboutJobDeal"
+        android:clickable="true"
+        android:padding="2dp"
+        android:text="@string/tac"
+        android:textColor="@color/colorText"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

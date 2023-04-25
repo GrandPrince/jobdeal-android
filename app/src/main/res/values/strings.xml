@@ -1,0 +1,344 @@
+<resources>
+    <string name="app_name">JobDeal</string>
+    <string name="locale">en</string>
+
+    <string name="default_error">Some error occurred…</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+
+    <!--APP DRAWER-->
+    <string name="about_jobdeal">About JobDeal</string>
+    <string name="about_jobdeal_desc">Job Deal is a global platform where you can post or find a job fast and easy.\nNeed someone to mown your lawn or to clean your windows? Or you want to make the best of your free time and earn some extra money?\nJoin our community now.</string>
+    <string name="login_register">Log in / Register</string>
+    <string name="contact">Contact Us</string>
+
+    <!--USER PROFILE DRAWER-->
+    <string name="my_statistic">My statistic</string>
+    <string name="notifications">Notifications</string>
+    <string name="bookmarks">Favorites</string>
+    <string name="applied_jobs">Applied jobs</string>
+    <string name="posted_jobs">Posted jobs</string>
+    <string name="wish_list">Wish list</string>
+    <string name="wish_list_title">WISH LIST</string>
+    <string name="settings">Settings</string>
+    <string name="log_out">Log Out</string>
+    <string name="tac">Terms of purchase &amp; General terms</string>
+
+    <!-- USER PROFILE-->
+    <string name="my_profile">My profile</string>
+    <string name="account_stats">Account statistic</string>
+    <string name="user_since">User since %1$s</string>
+    <string name="account_details">Account details</string>
+    <string name="save_changes">Save changes</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="delete_account_description">Click on the button below if you want to delete the account and all data associated with account.\nYou can\'t undo this action!</string>
+    <string name="delete_account_confirmation">Are you sure you want to delete the account and all data associated with account?\nYou can\'t undo this action!</string>
+    <string name="my_jobs">My jobs</string>
+    <string name="job_bids">Job Bids</string>
+    <string name="rating_params">%1$S / %2$d</string>
+    <string name="time_passed">%1$dd.%2$dh.%3$d min</string>
+    <string name="reset_password">Reset password</string>
+    <string name="successfully_update">Succesfully updated</string>
+    <string name="choose_picture_source">Choose picture source</string>
+    <string name="choose_gallery_or_camera">Please choose form gallery or take a picture</string>
+    <string name="camera">Camera</string>
+
+    <!--USER STATISTIC-->
+    <string name="rated_as_doer">Rated as doer</string>
+    <string name="rated_as_buyer">is rated as buyer</string>
+    <string name="jobs_done">Jobs done <b>%1$d</b></string>
+    <string name="earned">Earned <b>%1$s %2$s</b></string>
+    <string name="become_active_doer">Become active doer</string>
+    <string name="cancel_subscribtion">Cancel subscription</string>
+    <string name="cancel_subscription_dialog_message">Do you want to cancel subscription?</string>
+    <string name="become_Active_buyer">Become active buyer</string>
+    <string name="num_of_ratings">%1$d/%2$d</string>
+    <string name="check_job_offers">Check job offers</string>
+    <string name="doer_statistic">Doer Statistic</string>
+    <string name="buyer_statistic">Buyer Statistic</string>
+    <string name="jobs_done_simple">Jobs done</string>
+    <string name="earned_simple">Earned</string>
+    <string name="job_contract">Job contracts <b>%1$d</b></string>
+    <string name="spent">Spent <b>%1$s %2$s</b></string>
+    <string name="job_contract_simple">Job contracts</string>
+    <string name="spent_simple">Spent</string>
+    <!--CHECK DOERS-->
+    <string name="check_doers">Check doers</string>
+    <string name="rate">rate</string>
+    <string name="as_doer">%1$s as DOER</string>
+    <string name="as_buyer">%1$s as BUYER</string>
+
+    <!--DOER PROFILE-->
+    <string name="doer_profile">Doer profile</string>
+    <string name="doer_offer_for_job">Doer offer for your job</string>
+    <string name="buyer_profile">Buyer profile</string>
+
+
+    <!--CREATE A JOB-->
+    <string name="create_job">Create a job</string>
+    <string name="create_an_add">Create an Ad</string>
+    <string name="images_upload">Upload images %1$d / 5 </string>
+    <string name="job_name">Job name</string>
+    <string name="job_description">Tell us more about a job</string>
+    <string name="job_price">Price</string>
+    <string name="job_category">Job category</string>
+    <string name="add_job_location">Add job location</string>
+    <string name="job_duration">Expired at</string>
+    <string name="speedy_job">Speedy job</string>
+    <string name="speedy_job_description">*If you need to be done fast = it is speedy job</string>
+    <string name="boost_ad">Boost your ad</string>
+    <string name="boost_ad_description">*Boost your ad and make it more visible</string>
+    <string name="publish_job">Publish job</string>
+    <string name="max_images">You have already selected maximum number of images. Please remove some of images and try again.</string>
+    <string name="error_job_name">Job name is not valid.</string>
+    <string name="error_job_desc">Job description is too short. Please tell us more about your job offer.</string>
+    <string name="error_job_location">Job location is not set.</string>
+    <string name="error_job_price">Job price is not set or not valid.</string>
+    <string name="error_job_category">Job category is not set. Please set one category for your job.</string>
+    <string name="error_job_expired_at">Expired at is not set. Please set when your job offer should end.</string>
+    <string name="error_job_image">You need to add at least one image.</string>
+    <string name="error_payment_failed">Payment failed! Try again…</string>
+
+    <!--NOTIFICATION ITEM-->
+    <string name="new_bidder">You have a new bidder</string>
+    <string name="new_bidder_msg">Someone just applied for your job. Check it out now!</string>
+    <string name="rate_doer">Rate doer</string>
+    <string name="rate_doer_msg">Do you like how your job is done? Rate doer now.</string>
+    <string name="rate_buyer">Rate buyer</string>
+    <string name="rate_buyer_msg">Do you like how your job is done? Rate buyer now.</string>
+    <string name="you_got_job">Congratulations, you got the job, good luck!</string>
+    <string name="you_got_job_msg">You just have been chosen for a job. Buyer will contact you as soon as possible. </string>
+    <string name="job_near_you">Job near you</string>
+    <string name="job_near_you_msg">New job near you! Check it out. </string>
+    <string name="payment_subscription">Payment subscription</string>
+    <string name="payment_subscription_msg">Jour payment card is expired. Check your settings.</string>
+    <string name="now">Now</string>
+
+
+    <!--LOGIN/REGISTER-->
+    <string name="hi">Hi there!</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password_confirm">Confirm Password</string>
+    <string name="address">Address</string>
+    <string name="zip_code">ZIP Code</string>
+    <string name="city">City</string>
+    <string name="forgot_pass">Forget your password?</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="registration">Registration</string>
+    <string name="set_up_avatar">*Set up your profile picture</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="gallery">Gallery</string>
+    <string name="avatar_warning">Photo will be visible on your public profile.</string>
+    <string name="skip_next">Skip / Next</string>
+    <string name="mostly">I am mostly…</string>
+    <string name="buyer">Buyer</string>
+    <string name="doer">Doer</string>
+    <string name="role_warning">*OFFER job that needs to be done - choose BUYER\n*EARN some money - choose DOER</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="happy_our_team">We are happy to have you in our team.</string>
+    <string name="bank_id_validate_error">Bank ID is not valid.</string>
+    <string name="bank_id_verification_error">Bank ID verification failed! Check your Bank ID personal number.</string>
+    <string name="check_out_jobs">CHECK OUT JOB OFFERS</string>
+    <string name="retry">Retry</string>
+    <string name="role_not_selected">Please select a role.</string>
+    <string name="verifyBankId">Verify with BankID</string>
+    <string name="bankIdStart">Identification or signing in progress.</string>
+    <string name="bankId">Bank ID</string>
+    <string name="enter_As_guest">Enter as guest</string>
+    <string name="request_email">Request E-Mail</string>
+    <string name="forgot_pass_title">Forgot Password</string>
+    <string name="forgot_pass_desc">Type your email and we will send you email with reset password instructions.</string>
+    <string name="reset_instructions">Instructions will be sent to your E-Mail.</string>
+
+    <!--ERRORS-->
+    <string name="error_email_exist">E-Mail already exist!</string>
+    <string name="error_email">E-Mail address is not valid!</string>
+    <string name="error_password">Password need to me at least 6 characters!</string>
+    <string name="error_password_no_match">Passwords doesn\'t match!</string>
+    <string name="error_mobile">Mobile number is not valid!</string>
+    <string name="error_name">Name should not be empty!</string>
+    <string name="error_surname">Surname should not be empty!</string>
+    <string name="error_address">Address should not be empty!</string>
+    <string name="error_zip">Zip should not be empty!</string>
+    <string name="error_city">City should not be empty!</string>
+    <string name="request_write_permission">Enable storage permission in phone settings for JobDeal application.</string>
+    <string name="request_location_permission">Enable location permission in phone settings for JobDeal application.</string>
+    <string name="error_empty_comment">Comment can not be empty.</string>
+    <string name="error_add_comment">Some error occurred while trying to rate user.</string>
+
+    <!--MAIN-->
+    <string name="jobs">Jobs</string>
+    <string name="speedy_jobs">Speedy Jobs</string>
+    <string name="sort_by">Sort By</string>
+    <string name="published">Published</string>
+    <string name="price">Price</string>
+    <string name="expiration_date">Expiration Date</string>
+    <string name="latest">Latest</string>
+    <string name="oldest">Oldest</string>
+    <string name="lowest">Lowest</string>
+    <string name="highest">Highest</string>
+    <string name="first">First</string>
+    <string name="last">Last</string>
+    <string name="search">Search</string>
+    <string name="job_listed">%1$d of %2$d jobs listed</string>
+    <string name="login_required_title">Login required</string>
+    <string name="login_required_body">Register and become part of JobDeal community and use all features.</string>
+
+    <!--FILTER-->
+    <string name="filter">FILTERS</string>
+    <string name="categories">CATEGORIES</string>
+    <string name="distance">Distance</string>
+    <string name="insert_address">Set address</string>
+    <string name="my_location">My Location</string>
+    <string name="save">Save</string>
+    <string name="reset_filters">Reset Filters</string>
+    <string name="reset_wishlist">Reset Wish List</string>
+    <string name="categories_selected">%1$d selected</string>
+    <string name="search_address">Search address…</string>
+
+    <!--CATEGORIES-->
+    <string name="search_categories">Search categories…</string>
+
+    <!--JOBS-->
+    <string name="job_offer">JOB OFFER</string>
+    <string name="apply">Apply</string>
+    <string name="already_applied">You have applied to this job.</string>
+    <string name="my_bid">My Bid</string>
+    <string name="my_bid_desc">*Lower bid can increase your chances</string>
+    <string name="send_my_bid">Send my Bid</string>
+
+    <string name="choosed_for_job">You are choosed for this job!</string>
+    <string name="view_buyer">View buyers profile</string>
+    <string name="remove">Remove</string>
+    <string name="remove_job_desc">Are you sure you want to remove this job?</string>
+    <string name="share">Share</string>
+    <string name="jobdeal_description">Need extra money? Check Job Deal offers and earn fast.</string>
+    <string name="generate_share">Creating share link...</string>
+    <string name="report">Report</string>
+    <string name="report_desc">Write report...</string>
+
+    <!--PAYMENT-->
+    <string name="klarna">Klarna</string>
+    <string name="payment_required">Payment required</string>
+    <string name="percent_price">%1$d% of the offered price</string>
+    <string name="percent_price_additional">+ 1$d% of price difference between your offered price and bid price.</string>
+    <string name="pay_to_see_doer">To see doer contacts, choose payment method.</string>
+    <string name="swish_not_installed">Swish App is not installed!</string>
+
+    <!--MISC-->
+    <string name="phone">Phone: 0046 123 456 789</string>
+    <string name="contact_email">Email: info@jobdeal.com</string>
+    <string name="stay_in_touch">Stay in touch</string>
+    <string name="permission_location">We need your location access so we can provide you with the best user experience.</string>
+
+    <!-- PLURALS-->
+    <plurals name="years">
+        <item quantity="one">%1$d year</item>
+        <item quantity="two">%1$d years</item>
+        <item quantity="few">%1$d years</item>
+        <item quantity="many">%1$d years</item>
+        <item quantity="other">%1$d years</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%1$d month</item>
+        <item quantity="two">%1$d months</item>
+        <item quantity="few">%1$d months</item>
+        <item quantity="many">%1$d months</item>
+        <item quantity="other">%1$d months</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%1$d week</item>
+        <item quantity="two">%1$d weeks</item>
+        <item quantity="few">%1$d weeks</item>
+        <item quantity="many">%1$d weeks</item>
+        <item quantity="other">%1$d weeks</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%1$d day</item>
+        <item quantity="two">%1$d days</item>
+        <item quantity="few">%1$d days</item>
+        <item quantity="many">%1$d days</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d hour</item>
+        <item quantity="two">%1$d hours</item>
+        <item quantity="few">%1$d hours</item>
+        <item quantity="many">%1$d hours</item>
+        <item quantity="other">%1$d hours</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="two">%1$d minutes</item>
+        <item quantity="few">%1$d minutes</item>
+        <item quantity="many">%1$d minutes</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit est vel leo luctus, vitae porttitor arcu volutpat. Mauris facilisis fermentum sapien sit amet tincidunt. Ut rhoncus diam lorem, a imperdiet nulla varius eu. Nam commodo arcu ac est porttitor. </string>
+    <string name="no_reviews_yet">No reviews yet.</string>
+    <string name="filter_textview">*User who enter wish list options will be noted when someone outsources matching CV and area. *Wish List is optional and premium feature.</string>
+
+    <string name="choose_photo_title">Choose photos</string>
+    <string name="choose_photo_desc">Do you want to take a photo or to choose from gallery?</string>
+    <string name="take_a_photo">Take a photo</string>
+
+    <string name="sms_verification_description">You will receive verification code in SMS messages that is sent to your phone number.</string>
+    <string name="sms_resend">RESEND</string>
+    <string name="about_me_hint">Write something about yourself...</string>
+    <string name="about_me">About Me</string>
+    <string name="verification">Verification</string>
+    <string name="verify">Verify</string>
+    <string name="mobile_number_changed">We need to verify your new phone number. You will receive verification code in SMS messages that is sent to your phone number.</string>
+    <string name="home">Home</string>
+    <string name="offending">Offending</string>
+    <string name="avatar_image_mandatory">Profile image is mandatory. Please select profile image from gallery or take a picture from device camera.</string>
+    <string name="delivery_job">Delivery Job</string>
+    <string name="delivery_job_description">*If you need delivery type of job</string>
+    <string name="leave_a_comment">Leave a comment...</string>
+    <string name="show_help_on_way">Show "Help is on the way" ads</string>
+
+    <string name="choose_doer">Choose Doer</string>
+    <string name="choose_doer_desc">Are you sure you want to choose this Doer?</string>
+    <string name="help_on_way_desc">You can select "Help on the way" and badge will be shown on job ad, so other knows that you found the Doer!</string>
+    <string name="choose">Choose</string>
+    <string name="help_on_the_way">Help on the way</string>
+    <string name="job_expired">Job Expired</string>
+    <string name="choose_ok">You have chosen %1$s as your Doer.</string>
+
+    <string name="wish_list_desc">Om du lägger in en önskelista, får du en push så snart någon lägger ut ett job som stammer med den</string>
+    <string name="my_ads">My ads</string>
+    <string name="my_deals">Applied jobs</string>
+    <string name="call">Call your contractor</string>
+    <string name="message">Text your contractor</string>
+
+    <string name="active_jobs">Active Jobs</string>
+    <string name="expired_jobs">Expired Jobs</string>
+
+    <string name="buyer_already_rated">Buyer is already rated.</string>
+    <string name="doer_already_rated">Doer is already rated.</string>
+
+    <string name="unlock_underbidders">Unlock contact details of Doer\'s that offer lower price then your original offer!</string>
+    <string name="unlock">Unlock</string>
+    <string name="lower_bid_offer">Lower bid offer!</string>
+
+    <!-- TUTORIAL -->
+    <string name="tutorial">Tutorial</string>
+    <string name="tutorial_1">Choose to create a job or search for one yourself. In the feed, you see all the ads that are out right now.\n\nOn the map you get an overview of where the jobs are.</string>
+    <string name="tutorial_2">Look at who is advertising around you. Have you found a job for you?\n\nChoose to apply for the specified amount or bargain for a greater chance of getting the job.</string>
+    <string name="tutorial_3">Do you have a job that needs to be done? Describe it below and then publish it for all users to see.\nRemember that it is completely free to publish jobs!</string>
+    <string name="tutorial_4">Once you have received one or more applications for your ad, it is time for you to choose who gets the job. To access the jobseeker\'s information and contact information, you pay 10% of the ad\'s value. You can also choose to pay an additional 5% to unlock the profiles that have bargained on the amount - which in the end can be a cheaper choice for you as an advertiser.</string>
+
+</resources>

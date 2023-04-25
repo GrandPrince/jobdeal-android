@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            app:title="@string/doer_profile"
+            app:titleTextAppearance="@style/TextAllCaps"
+            app:titleTextColor="@color/colorWhite">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/cvProfileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="12dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civProfilePicture"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/tvUserFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/civProfilePicture"
+                android:textColor="@color/colorText"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/tvLocation"
+                android:layout_alignBottom="@+id/tvLocation"
+                android:layout_below="@id/tvUserFullName"
+                android:padding="2dp"
+                android:src="@drawable/ic_location"
+                app:tint="@color/colorText"
+                android:layout_toRightOf="@id/civProfilePicture"/>
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_toRightOf="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserFullName"
+                android:text="Belgrade" />
+
+            <TextView
+                android:id="@+id/tvJoinDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLocation"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/civProfilePicture"
+                android:text="@string/user_since"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvAboutMe"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:textSize="12dp"
+                android:visibility="invisible"
+                android:layout_below="@+id/civProfilePicture"
+                android:layout_margin="8dp"
+                />
+
+            <View
+                android:id="@+id/vSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvAboutMe"
+                android:background="@color/colorGrey" />
+
+            <LinearLayout
+                android:id="@+id/llInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vSeparator"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/tvDoerOfferBuyerContract"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/doer_offer_for_job"
+                        android:textColor="@color/colorTextSecondary" />
+
+                    <TextView
+                        android:id="@+id/tvValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvDoerOfferBuyerContract"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="0"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_arrow_forward"
+                        android:id="@+id/btnNext"
+                        android:visibility="invisible"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vDummySeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/llInfo"
+                android:background="@color/colorGrey"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvMobileNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vDummySeparator"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="+381 60 03 82 332"
+                android:textAllCaps="true"
+                android:textColor="@color/colorText"
+                android:textSize="14dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:background="@color/colorGrey">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvRatingList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/mcActions"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:contentPadding="8dp"
+            android:visibility="invisible"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+            <RelativeLayout
+                android:id="@+id/rlNoReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_below="@id/tvNumberOfRates"
+                android:visibility="invisible"
+                >
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/bitmap_copy" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/no_reviews_yet" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvNumberOfRates">
+
+
+
+                <TextView
+                    android:id="@+id/tvNumberOfRates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/num_of_ratings"
+                    android:textColor="@color/colorGrey"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRatings"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingTop="32dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:id="@+id/tvRatedAsBuyerDoer"
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:text="@string/rated_as_doer"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorDarkGrey"
+                    android:background="@drawable/white_semitransparent"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcActions"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:cardElevation="16dp"
+            app:cardBackgroundColor="@color/colorGreen"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivPhone"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGreen"
+                    android:src="@drawable/telephone"
+                    app:tint="@color/colorWhite"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:visibility="visible"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:alpha="1"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorWhiteTrans"/>
+
+
+                <TextView
+                    android:id="@+id/tvApply"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGreen"
+                    android:text="@string/choose_doer"
+                    android:gravity="center"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:drawableEnd="@drawable/ic_jobdeal_shake_small"
+                    android:drawableStart="@drawable/ic_jobdeal_shake_small"
+                    android:autoSizeTextType="uniform"
+                    android:maxLines="1"
+                    android:autoSizeMinTextSize="8dp"
+                    android:autoSizeMaxTextSize="12dp"
+                    android:textAllCaps="true"
+                    android:visibility="visible"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:alpha="1"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorWhiteTrans"/>
+
+                <ImageView
+                    android:id="@+id/ivMessage"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.25"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorGreen"
+                    android:src="@drawable/sms"
+                    app:tint="@color/colorWhite"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp"
+                    android:visibility="visible"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

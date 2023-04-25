@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="16dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            app:title="@string/my_profile"
+            app:titleTextAppearance="@style/TextAllCaps"
+            app:titleTextColor="@color/colorWhite">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBarLayout"
+            android:clipToPadding="false"
+            android:padding="16dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvPictureName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12dp"
+                app:contentPadding="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone"
+                        android:layout_marginTop="48dp" />
+
+                    <ImageView
+                        android:id="@+id/ivProfilePicture"
+                        android:layout_width="102dp"
+                        android:layout_height="102dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/placeholder" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivProfilePicture"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/colorText"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/ivEditUserPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_edit" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAccountStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvPictureName"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvAccountStats"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:drawableRight="@drawable/ic_arrow_forward"
+                        android:padding="8dp"
+                        android:text="@string/account_stats"
+                        android:textColor="@color/colorText" />
+
+                    <View
+                        android:id="@+id/Separator"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/tvAccountStats"
+                        android:background="@color/colorGrey" />
+
+                    <TextView
+                        android:id="@+id/tvUserSince"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Separator"
+                        android:padding="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="@string/user_since"
+                        android:textColor="@color/colorAddress" />
+
+                    <TextView
+                        android:id="@+id/tvMonthYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Separator"
+                        android:layout_toRightOf="@id/tvUserSince"
+                        android:padding="8dp" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvMyJobs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cvAccountStats"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvMyJobs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:drawableRight="@drawable/ic_arrow_forward"
+                android:padding="8dp"
+                android:text="@string/posted_jobs"
+                android:textColor="@color/colorText" />
+        </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAccountDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvMyJobs"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12dp"
+                app:contentPadding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivEditAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/account_details"
+                        android:textColor="@color/colorText"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etBankId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ivEditAccount"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/bankId"
+                        android:inputType="number"
+                        android:padding="6dp"
+                        android:visibility="gone"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etBankId"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/name"
+                        android:inputType="textCapWords"
+                        android:padding="6dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etSurname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etName"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/surname"
+                        android:inputType="textCapWords"
+                        android:padding="6dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMobileNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etSurname"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/mobile_number"
+                        android:inputType="phone"
+                        android:padding="6dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etMobileNumber"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:padding="6dp" />
+
+                    <TextView
+                        android:id="@+id/etPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etEmail"
+                        android:layout_marginBottom="8dp"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:padding="6dp"
+                        android:textColor="@color/colorText"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvResetPass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@id/etAddress"
+                        android:layout_below="@id/etEmail"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:hint="@string/reset_password"
+                        android:textColor="@color/colorText"
+                        android:visibility="invisible" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etPassword"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/address"
+                        android:inputType="textCapSentences"
+                        android:padding="6dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etZipCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etAddress"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/zip_code"
+                        android:inputType="textCapSentences"
+                        android:padding="6dp" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etZipCode"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/city"
+                        android:inputType="textCapSentences"
+                        android:padding="6dp" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAboutMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvAccountDetails"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12dp"
+                app:contentPadding="8dp"
+                android:layout_marginBottom="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="8dp">
+
+                    <ImageView
+                        android:id="@+id/ivEditAboutMe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/ic_edit" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_me"
+                        android:textColor="@color/colorText"
+                        android:layout_marginBottom="8dp"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAboutMe"
+                        android:layout_width="match_parent"
+                        android:layout_height="96dp"
+                        android:layout_below="@id/ivEditAboutMe"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_shape"
+                        android:hint="@string/about_me_hint"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:scrollbars="horizontal"
+                        android:padding="6dp"
+                        android:gravity="start|top"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+             </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvAboutMe"
+                android:text="@string/save_changes"
+                app:backgroundTint="@color/colorDead"
+                app:cornerRadius="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDeleteAccountDesc"
+                android:layout_below="@+id/btnSaveChanges"
+                android:layout_marginTop="64dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorGrey"
+                android:text="@string/delete_account_description"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDeleteAccountDesc"
+                android:text="@string/delete_account"
+                android:textColor="@color/colorDarkGrey"
+                app:backgroundTint="@color/colorGrey"
+                app:cornerRadius="8dp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

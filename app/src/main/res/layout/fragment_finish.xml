@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.register.AvatarFragment"
+    tools:background="@drawable/gradient">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background_tools_green"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="168dp"
+        android:layout_height="168dp"
+        android:src="@drawable/logo_full_white"
+        android:layout_above="@+id/tvCongratulation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="96dp"/>
+
+    <TextView
+        android:id="@+id/tvCongratulation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="24dp"
+        android:textAllCaps="true"
+        android:text="@string/congratulations"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/happy_our_team"
+        android:textColor="@color/colorWhite"
+        android:textSize="14dp"
+        android:layout_below="@id/tvCongratulation"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFinish"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/check_out_jobs"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/colorDead"
+        app:cornerRadius="8dp"
+        android:layout_marginBottom="16dp"/>
+
+</RelativeLayout>

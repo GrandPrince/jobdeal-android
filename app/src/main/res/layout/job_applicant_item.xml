@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginRight="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:id="@+id/rlProfileInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <RelativeLayout
+            android:id="@+id/rlContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civProfilePicture"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/tvUserFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/civProfilePicture"
+                android:textColor="@color/colorText"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivLocationIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_below="@id/tvUserFullName"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/civProfilePicture"
+                android:src="@drawable/ic_place"
+                android:tint="@color/colorText" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserFullName"
+                android:layout_toRightOf="@id/ivLocationIcon" />
+
+            <com.willy.ratingbar.BaseRatingBar
+                android:id="@+id/rbProfileRating"
+                android:layout_width="wrap_content"
+                android:layout_height="12dp"
+                android:layout_below="@id/tvLocation"
+                android:layout_alignLeft="@id/ivLocationIcon"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/civProfilePicture"
+                app:srb_clearRatingEnabled="true"
+                app:srb_clickable="true"
+                app:srb_drawableEmpty="@drawable/ic_star_empty"
+                app:srb_drawableFilled="@drawable/ic_star_full"
+                app:srb_isIndicator="false"
+                app:srb_minimumStars="0"
+                app:srb_numStars="5"
+                app:srb_scrollable="false"
+                app:srb_starHeight="12dp"
+                app:srb_starPadding="0dp"
+                app:srb_starWidth="12dp"
+                app:srb_stepSize="0.5" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLocation"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/rbProfileRating"
+                android:text="@string/rating_params"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/ivJobAgreed"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/icon_jobdeal_logo_gradient"
+                android:tint="@color/colorGreen" />
+
+            <TextView
+                android:id="@+id/tvBidPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ivJobAgreed"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+                android:text="453 RSD"
+                android:textColor="@color/colorText"
+                android:textStyle="bold" />
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvLowerBid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlContent"
+            android:layout_alignParentRight="true"
+            android:text="@string/lower_bid_offer"
+            android:padding="2dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorOrange"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

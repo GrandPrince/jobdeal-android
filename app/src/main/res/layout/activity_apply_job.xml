@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.job.ApplyJobActivity"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/icon_jobdeal_logo_gradient"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/tvMyBid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:text="@string/my_bid"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ivImage"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMyBid"
+            android:id="@+id/tvMyBidDesc"
+            android:text="@string/my_bid_desc"
+            android:layout_centerHorizontal="true"
+            android:textStyle="italic"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMyBidDesc"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/round_shape"
+            android:gravity="center"
+            android:hint="@string/job_price"
+            android:inputType="numberDecimal"
+            android:padding="12dp" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@+id/btnApply"
+            android:layout_alignBottom="@+id/btnApply"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
+
+        <RelativeLayout
+            android:id="@+id/btnApply"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/etPrice"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="32dp"
+            android:visibility="visible"
+            android:background="@drawable/green_button" >
+
+            <TextView
+                android:id="@+id/tvSendMyBid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/send_my_bid"
+                android:textSize="16dp"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_centerInParent="true"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_jobdeal_shake"
+                android:layout_toLeftOf="@+id/tvSendMyBid"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_jobdeal_shake"
+                android:layout_toRightOf="@+id/tvSendMyBid"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

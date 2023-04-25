@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="12dp"
+    app:contentPadding="16dp"
+    android:layout_margin="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvPaymentRequired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/payment_required"
+            android:textAllCaps="true"
+            android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPaymentRequired"
+            android:layout_centerHorizontal="true"
+            android:text="---"
+            android:textColor="@color/colorText"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPriceDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPrice"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:textAlignment="center"
+            android:text=""
+            android:textColor="@color/colorText"
+            android:layout_marginBottom="12dp"/>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlKlarnaPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPriceDesc"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_shape"
+            android:visibility="gone"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_klarna" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlSwishPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlKlarnaPayment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/round_shape"
+            android:padding="4dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_swish" />
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/pbPayment"
+            android:layout_below="@+id/rlKlarnaPayment"
+            android:layout_marginTop="-16dp"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
+

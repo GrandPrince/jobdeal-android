@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    tools:context=".view.doer.DoerProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="4dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient"
+            app:title="@string/doer_profile"
+            app:titleTextAppearance="@style/TextAllCaps"
+            app:titleTextColor="@color/colorWhite">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/rlProfileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civProfilePicture"
+                    android:layout_width="62dp"
+                    android:layout_height="62dp"
+                    android:src="@drawable/placeholder" />
+
+                <TextView
+                    android:id="@+id/tvUserFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/civProfilePicture"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/ivLocationIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_below="@id/tvUserFullName"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@id/civProfilePicture"
+                    android:src="@drawable/ic_place"
+                    android:tint="@color/colorText" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvUserFullName"
+                    android:layout_toRightOf="@id/ivLocationIcon" />
+
+                <com.willy.ratingbar.BaseRatingBar
+                    android:id="@+id/rbProfileRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_below="@id/tvLocation"
+                    android:layout_alignLeft="@id/ivLocationIcon"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@id/civProfilePicture"
+                    app:srb_clearRatingEnabled="true"
+                    app:srb_clickable="true"
+                    app:srb_drawableEmpty="@drawable/ic_star_empty"
+                    app:srb_drawableFilled="@drawable/ic_star_full"
+                    app:srb_isIndicator="false"
+                    app:srb_minimumStars="0"
+                    app:srb_numStars="5"
+                    app:srb_scrollable="false"
+                    app:srb_starHeight="12dp"
+                    app:srb_starPadding="0dp"
+                    app:srb_starWidth="12dp"
+                    app:srb_stepSize="0.5" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvLocation"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/rbProfileRating"
+                    android:text="@string/rating_params"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:id="@+id/ivPremiumUser"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="6dp"
+                    android:src="@drawable/ic_beenhere"
+                    android:tint="@color/colorGreen"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/dummyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/tvRating"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorGrey" />
+
+                <TextView
+                    android:id="@+id/tvDoerOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dummyView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/doer_offer_for_job" />
+
+                <TextView
+                    android:id="@+id/tvBidPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDoerOffer"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/colorText" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:clipToPadding="false">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="8dp"
+            app:contentPadding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:id="@+id/tvRatedAsDoer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rated_as_doer"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorText"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvRatedAsDoer"
+                    android:layout_marginTop="8dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnConfirmDoer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:tint="@color/colorWhite"
+        android:src="@drawable/ic_jobdeal_shake"
+        app:fabSize="normal"
+        app:useCompatPadding="false" />
+
+</RelativeLayout>

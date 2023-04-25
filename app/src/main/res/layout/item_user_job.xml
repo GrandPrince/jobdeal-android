@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvJob"
+    android:layout_marginTop="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="84dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardElevation="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:id="@+id/ivJobImage"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_job" />
+
+        <TextView
+            android:id="@+id/tvJobName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/ivJobImage"
+            android:textColor="@color/colorText"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/ivTimer"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_below="@id/tvJobName"
+            android:layout_alignLeft="@id/tvJobName"
+            android:layout_toRightOf="@id/ivJobImage"
+            android:src="@drawable/ic_timer"
+            app:tint="@color/colorGrey" />
+
+        <TextView
+            android:id="@+id/tvJobTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvJobName"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/ivTimer"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tvJobDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivTimer"
+            android:layout_alignLeft="@id/ivTimer"
+            android:layout_toRightOf="@id/ivJobImage"
+            android:layout="@id/ivJobImage"
+            android:textColor="@color/colorGrey"
+            android:layout_toLeftOf="@+id/tvJobPrice"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:id="@+id/tvNumOfBiders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/colorText"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvJobPrice"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNumOfBiders"
+            android:layout_alignRight="@id/tvNumOfBiders"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/colorText"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivJobAgreed"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/icon_jobdeal_logo_gradient"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivLock"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/padlock"
+        android:tint="@color/colorText" />
+
+</com.google.android.material.card.MaterialCardView>

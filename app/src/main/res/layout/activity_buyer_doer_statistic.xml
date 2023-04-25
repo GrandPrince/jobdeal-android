@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient"
+            app:title="@string/my_statistic"
+            app:titleTextAppearance="@style/TextAllCaps"
+            app:titleTextColor="@color/colorWhite">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <RelativeLayout
+            android:id="@+id/cvProfileInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:padding="12dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civProfilePicture"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/placeholder" />
+
+            <TextView
+                android:id="@+id/tvUserFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/civProfilePicture"
+                android:textColor="@color/colorText"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/tvLocation"
+                android:layout_alignBottom="@+id/tvLocation"
+                android:layout_below="@id/tvUserFullName"
+                android:padding="2dp"
+                android:src="@drawable/ic_location"
+                android:tint="@color/colorText"
+                android:layout_toRightOf="@id/civProfilePicture"/>
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_toRightOf="@+id/ivLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserFullName"
+                android:text="Belgrade" />
+
+            <TextView
+                android:id="@+id/tvJoinDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLocation"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/civProfilePicture"
+                android:text="@string/user_since"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="12dp" />
+
+            <View
+                android:id="@+id/vSeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/civProfilePicture"
+                android:background="@color/colorGrey" />
+
+            <LinearLayout
+                android:id="@+id/llInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vSeparator"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/tvJobsDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/jobs_done"
+                        android:textColor="@color/colorTextSecondary" />
+
+                    <TextView
+                        android:id="@+id/tvNumberOfJobs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvJobsDone"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:id="@+id/tvEarnedPlaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="@string/earned"
+                        android:textColor="@color/colorTextSecondary" />
+
+                    <TextView
+                        android:id="@+id/tvEarnedSpent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvEarnedPlaceholder"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/colorDarkGrey"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/vDummySeparator"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/llInfo"
+                android:background="@color/colorGrey" />
+
+            <TextView
+                android:id="@+id/tvActiveDoerBuyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vDummySeparator"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="@string/become_active_doer"
+                android:textAllCaps="true"
+                android:textColor="@color/colorGreen"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/ivIconBeenHere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/vDummySeparator"
+                android:layout_alignTop="@id/tvActiveDoerBuyer"
+                android:layout_alignBottom="@id/tvActiveDoerBuyer"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_beenhere"
+                android:tint="@color/colorGreen"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appBarLayout"
+        android:background="@color/colorGrey">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvRatingList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="12dp"
+                app:contentPadding="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_above="@+id/btnCheckJobOffers">
+
+                <RelativeLayout
+                    android:id="@+id/rlNoReviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_below="@id/tvNumberOfRates"
+                    android:visibility="invisible"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="112dp"
+                        android:layout_height="112dp"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/empty_rating" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/no_reviews_yet" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/tvNumberOfRates">
+
+
+
+                    <TextView
+                        android:id="@+id/tvNumberOfRates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/num_of_ratings"
+                        android:textColor="@color/colorGrey"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRatings"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="32dp"
+                        android:clipToPadding="false">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/tvRatedAsBuyerDoer"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        android:text="@string/rated_as_doer"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorDarkGrey"
+                        android:background="@drawable/white_semitransparent"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckJobOffers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:cornerRadius="8dp"
+            android:elevation="24dp"
+            android:text="@string/check_job_offers"
+            app:backgroundTint="@color/colorDead" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

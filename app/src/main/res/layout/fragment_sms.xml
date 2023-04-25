@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@drawable/gradient"
+        tools:context=".view.register.RegisterFragment">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/logo_full_white" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLogo"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:text="@string/sms_verification_description"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDesc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="02:00"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/etPin"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDesc"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:inputType="number"
+            android:textColor="@color/colorWhite"
+            android:textSize="24dp"
+            app:cursorColor="@color/colorWhite"
+            app:hideLineWhenFilled="false"
+            app:itemCount="6"
+            app:itemRadius="1dp"
+            app:itemSpacing="10dp"
+            app:itemWidth="38dp"
+            app:lineColor="@color/colorWhite"
+            app:viewType="line" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_below="@+id/etPin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/next"
+            android:visibility="visible"
+            app:backgroundTint="@color/colorDead"
+            app:cornerRadius="8dp" />
+
+        <ProgressBar
+            android:id="@+id/pbNext"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignTop="@+id/btnNext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:elevation="32dp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

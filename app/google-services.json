@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "675409869675",
+    "firebase_url": "https://jobdeal-1e53c.firebaseio.com",
+    "project_id": "jobdeal-1e53c",
+    "storage_bucket": "jobdeal-1e53c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675409869675:android:bfda90a0cce1b09e",
+        "android_client_info": {
+          "package_name": "com.justraspberry.jobdeal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKUdXRCgOkkZj65Vo-2tPNDu_kp4T2TlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675409869675-b8il7rl7hmqj0d3r7isrec8iofu38phn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "675409869675-hgsehbetpo1u7vhuhihkenkoq8c5j91i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "jobdeal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:background="@drawable/gradient">
+
+    <LinearLayout
+        android:id="@+id/img_layout"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="80dip"
+        android:gravity="center"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp">
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitStart"
+            android:src="@drawable/describe_job_fields" />
+
+        <ImageView
+            android:id="@+id/ivImage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/pay_swish" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_layout"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:lineHeight="24dp"
+        android:text="@string/tutorial_3"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+
+        />
+
+</RelativeLayout>

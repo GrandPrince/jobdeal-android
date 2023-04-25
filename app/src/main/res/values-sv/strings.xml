@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JobDeal</string>
+    <string name="locale">sv</string>
+
+    <string name="default_error">Ett fel inträffade…</string>
+    <string name="cancel">Avbryt</string>
+    <string name="ok">OK</string>
+
+    <!--APP DRAWER-->
+    <string name="about_jobdeal">Om JobDeal</string>
+    <string name="about_jobdeal_desc">JobDeal är en global plattform där du kan lägga ut eller hitta ett jobb snabbt och enkelt.\nBehöver du hjälp med gräsklippning eller tvätta fönster? Eller vill du utnyttja fritiden till att tjäna extra pengar?\nGå med i vår community nu!</string>
+    <string name="login_register">Logga in / Registrera</string>
+    <string name="contact">Kontakta oss</string>
+
+    <!--USER PROFILE DRAWER-->
+    <string name="my_statistic">Min prifil</string>
+    <string name="notifications">Notiser</string>
+    <string name="bookmarks">Favoriter</string>
+    <string name="applied_jobs">Sökta jobb</string>
+    <string name="posted_jobs">Utlagda jobb</string>
+    <string name="wish_list">Önskelista</string>
+    <string name="wish_list_title">ÖNSKELISTA</string>
+    <string name="settings">Inställningar</string>
+    <string name="log_out">Logga ut</string>
+    <string name="delete_account">Radera konto</string>
+    <string name="delete_account_description">Klicka på knappen nedan om du vill radera ditt konto med all tillhörande information.\nDu kan inte ångra denna åtgärd"</string>
+    <string name="delete_account_confirmation">Är du säker på att du vill radera ditt konto med all tillhörande information?\nDu kan inte ångra denna åtgärd!</string>
+    <string name="tac">Köpvillkor &amp; Allmäna villkor</string>
+
+    <!-- USER PROFILE-->
+    <string name="my_profile">Min profil</string>
+    <string name="account_stats">Konto statistik</string>
+    <string name="user_since">Användare sen %1$s</string>
+    <string name="account_details">Konto detaijer</string>
+    <string name="save_changes">Spara ändringar</string>
+    <string name="my_jobs">Mina jobb</string>
+    <string name="job_bids">Jobb bud</string>
+    <string name="rating_params">%1$S / %2$d</string>
+    <string name="time_passed">%1$dd.%2$dt.%3$d min</string>
+    <string name="reset_password">Återställ lösenord</string>
+    <string name="successfully_update">Updatering ok</string>
+    <string name="choose_picture_source">Välj fotokälla</string>
+    <string name="choose_gallery_or_camera">Välj från kamerarulle eller ta ett foto</string>
+    <string name="camera">Kamera</string>
+
+    <!--USER STATISTIC-->
+    <string name="rated_as_doer">Du är betygsatt som utförare</string>
+    <string name="rated_as_buyer">är betygsatt som annonsör</string>
+    <string name="jobs_done">Jobb utförda <b>%1$d</b></string>
+    <string name="earned">Tjänat <b>%1$s %2$s</b></string>
+    <string name="become_active_doer">Bli en aktiv görare</string>
+    <string name="cancel_subscribtion">Avbryt prenumeration</string>
+    <string name="cancel_subscription_dialog_message">Vill du avbryta prenumeration?</string>
+    <string name="become_Active_buyer">Bli en aktiv köparer</string>
+    <string name="num_of_ratings">%1$d/%2$d</string>
+    <string name="check_job_offers">Leta efter jobb</string>
+    <string name="doer_statistic">Görare Statistik</string>
+    <string name="buyer_statistic">Köpare Statistik</string>
+    <string name="jobs_done_simple">Utförda jobb</string>
+    <string name="earned_simple">Tjänat</string>
+    <string name="job_contract">Jobb kontrakt <b>%1$d</b></string>
+    <string name="spent">Spenderat <b>%1$s %2$s</b></string>
+    <string name="job_contract_simple">Jobb kontrakt</string>
+    <string name="spent_simple">Spenderat</string>
+    <!--CHECK DOERS-->
+    <string name="check_doers">Kolla Görare</string>
+    <string name="rate">betygsätt</string>
+    <string name="as_doer">%1$s som Görare</string>
+    <string name="as_buyer">%1$s so Köpare</string>
+
+    <!--DOER PROFILE-->
+    <string name="doer_profile">Görare profil</string>
+    <string name="doer_offer_for_job">Görares bud för ditt jobb</string>
+    <string name="buyer_profile">Köpare profil</string>
+
+
+    <!--CREATE A JOB-->
+    <string name="create_job">Skapa ett jobb</string>
+    <string name="create_an_add">Skapa en annons</string>
+    <string name="images_upload">Ladda upp bild %1$d / 5 </string>
+    <string name="job_name">Jobb namn</string>
+    <string name="job_description">Berätta mer om jobbet</string>
+    <string name="job_price">Pris</string>
+    <string name="job_category">Jobb kategori</string>
+    <string name="add_job_location">Lägg till jobb plats</string>
+    <string name="job_duration">Löper ut</string>
+    <string name="speedy_job">Bråttom jobb</string>
+    <string name="speedy_job_description">*Om du behöver få det gjort fort = Bråttom jobb</string>
+    <string name="boost_ad">Öka synlighet</string>
+    <string name="boost_ad_description">*Öka synlighet och få mer svar</string>
+    <string name="publish_job">Publicera jobb</string>
+    <string name="max_images">Du har redan valt max antal bilder. Ta bort någon och försök igen.</string>
+    <string name="error_job_name">Jobb namn är inte giltigt.</string>
+    <string name="error_job_desc">Jobb beskrivning är för kort. Berätta mer om ditt jobb erbjudande.</string>
+    <string name="error_job_location">Jobbets plats är inte angiven.</string>
+    <string name="error_job_price">Jobb pris är inte angivet eller felaktigt.</string>
+    <string name="error_job_category">Jobb kategori är inte vald. Välj en kategori för ditt jobb.</string>
+    <string name="error_job_expired_at">Utgångstid för ditt jobb är inte satt. Sätt in när erbjudandet löper ut.</string>
+    <string name="error_job_image">Du måste ha minst ett foto.</string>
+    <string name="error_payment_failed">Betalning misslyckades! Försök igen…</string>
+
+    <!--NOTIFICATION ITEM-->
+    <string name="new_bidder">Du har en ny budare</string>
+    <string name="new_bidder_msg">Någon sökte just ett av dina jobb. Kolla!</string>
+    <string name="rate_doer">Betygsätt Görare</string>
+    <string name="rate_doer_msg">Gillar du hur jobbet utfördes? Betygsätt Görare .</string>
+    <string name="rate_buyer">Betygsätt Köpare</string>
+    <string name="rate_buyer_msg">Gillade du hur jobbet var? Betygsätt Köpare.</string>
+    <string name="you_got_job">Grattis, du fick jobbet, lycka till!</string>
+    <string name="you_got_job_msg">Du har blivit utvald för ett jobb. Köparen kommer att kontakta dig inom kort. </string>
+    <string name="job_near_you">Jobb nära dig</string>
+    <string name="job_near_you_msg">Nya jobb nära dig! Kolla. </string>
+    <string name="payment_subscription">Betalning av prenumeration</string>
+    <string name="payment_subscription_msg">Ditt betalkort har gått ut. Vänligen uppdatera betalmetod.</string>
+    <string name="now">Nu</string>
+
+
+    <!--LOGIN/REGISTER-->
+    <string name="hi">Välkommen!</string>
+    <string name="login">Logga in</string>
+    <string name="register">Registrera</string>
+    <string name="email">Email</string>
+    <string name="password">Lösenord</string>
+    <string name="password_confirm">Bekräfta Lösenord</string>
+    <string name="address">Adress</string>
+    <string name="zip_code">Postnummer</string>
+    <string name="city">Stad</string>
+    <string name="forgot_pass">Glömt ditt Lösenord?</string>
+    <string name="mobile_number">Mobilnummer</string>
+    <string name="name">Namn</string>
+    <string name="surname">Efternamn</string>
+    <string name="next">Nästa</string>
+    <string name="finish">Färdig</string>
+    <string name="registration">Registrering</string>
+    <string name="set_up_avatar">*Lägg upp din Profilbild</string>
+    <string name="take_photo">Ta ett foto</string>
+    <string name="gallery">Kamerarulle</string>
+    <string name="avatar_warning">Din profilbild kommer att visas is systemet.</string>
+    <string name="skip_next">Hoppa över / Nästa</string>
+    <string name="mostly">Jag är mestadels…</string>
+    <string name="buyer">Köpare</string>
+    <string name="doer">Görare</string>
+    <string name="role_warning">*Erbjuda jobb som ska utföras - välj Köpare\n*Tjäna pengar - Välj Görare </string>
+    <string name="congratulations">Grattis</string>
+    <string name="happy_our_team">Vi är glada att ha dig i vårt team.</string>
+    <string name="bank_id_validate_error">Bank ID är inte giltigt.</string>
+    <string name="bank_id_verification_error">Bank ID verifiering misslyckades! Kolla ditt personnummer och kod.</string>
+    <string name="check_out_jobs">Kolla Jobb Erbjudanden</string>
+    <string name="retry">Prova igen</string>
+    <string name="role_not_selected">Välj en roll.</string>
+    <string name="verifyBankId">Verifiera med BankID</string>
+    <string name="bankIdStart">Identifiering eller inlogg pågår.</string>
+    <string name="bankId">BankID</string>
+    <string name="enter_As_guest">Gå in som gäst</string>
+    <string name="request_email">Begär E-Mail</string>
+    <string name="forgot_pass_title">Glömt lösenord</string>
+    <string name="forgot_pass_desc">Skriv din E-maiadressl så skickar vi återställt lösenord samt instruktioner.</string>
+    <string name="reset_instructions">Instruktioner kommer på din E-mail.</string>
+
+    <!--ERRORS-->
+    <string name="error_email_exist">E-Mail adress finns redant!</string>
+    <string name="error_email">E-Mail adress är inte giltig!</string>
+    <string name="error_password">Lösenord måste vara minst 6 tecken långt!</string>
+    <string name="error_password_no_match">Lösenord är inte lika!</string>
+    <string name="error_mobile">Mobil nummer är inte giltigt!</string>
+    <string name="error_name">Namn fält ska inte vara tomt!</string>
+    <string name="error_surname">Efternamns fält ska inte vara tomt!</string>
+    <string name="error_address">Adress fält ska inte vara tomt!</string>
+    <string name="error_zip">Postnummer fält ska inte vara tomt!</string>
+    <string name="error_city">Stad fält ska inte vara tomt!</string>
+    <string name="request_write_permission">Godkänn att JobDeal får lagra data i mobilen.</string>
+    <string name="request_location_permission">Godkänn att JobDeal får använda mobilens geografiska position.</string>
+    <string name="error_empty_comment">Kommentar fält får inte vara tomt.</string>
+    <string name="error_add_comment">Ett fel inträffade vid betygsättande av användare.</string>
+
+    <!--MAIN-->
+    <string name="jobs">Annonser</string>
+    <string name="speedy_jobs">Bråttom Jobb</string>
+    <string name="sort_by">Sortera efter</string>
+    <string name="published">Publicerad</string>
+    <string name="price">Pris</string>
+    <string name="expiration_date">Utgångsdatum</string>
+    <string name="latest">Senaste</string>
+    <string name="oldest">Äldsta</string>
+    <string name="lowest">Lägsta</string>
+    <string name="highest">Högsta</string>
+    <string name="first">Första</string>
+    <string name="last">Sista</string>
+    <string name="search">Search</string>
+    <string name="job_listed">%1$d of %2$d jobb visade</string>
+    <string name="login_required_title">Inlogg krävs</string>
+    <string name="login_required_body">Registrera och bli en medlem i JobDeal Community.</string>
+
+    <!--FILTER-->
+    <string name="filter">FILTER</string>
+    <string name="categories">KATEGORIER</string>
+    <string name="distance">Avstånd</string>
+    <string name="insert_address">Skriv in adress</string>
+    <string name="my_location">Nuvarande plats</string>
+    <string name="save">Spara</string>
+    <string name="reset_filters">Nollställ Filter</string>
+    <string name="reset_wishlist">Nollställ Önskelista</string>
+    <string name="categories_selected">%1$d valda</string>
+    <string name="search_address">Sök adress…</string>
+
+    <!--CATEGORIES-->
+    <string name="search_categories">Sök Kategorier…</string>
+
+    <!--JOBS-->
+    <string name="job_offer">JOBB ERBJUDANDEN</string>
+    <string name="apply">Sök</string>
+    <string name="already_applied">Du har sökt detta jobb.</string>
+    <string name="my_bid">Mitt bud</string>
+    <string name="my_bid_desc">*Lägre bud kan öka dina chanser att få jobbet</string>
+    <string name="send_my_bid">Skicka mitt Bud</string>
+    <string name="choosed_for_job">Du är utvald att utföra detta jobb!</string>
+    <string name="view_buyer">Visa Köparens profil</string>
+    <string name="remove">Ta bort</string>
+    <string name="remove_job_desc">Är du säker att du vill ta bort det här jobbet?</string>
+    <string name="share">Dela</string>
+    <string name="jobdeal_description">Behöver du extra pengar? Kolla in JobDeal´s erbjudande och tjäna snabbt.</string>
+    <string name="generate_share">Skapa delnings länk...</string>
+    <string name="report">Rapporterat</string>
+    <string name="report_desc">Skriv rapport...</string>
+
+    <!--PAYMENT-->
+    <string name="klarna">Klarna</string>
+    <string name="payment_required">Betalning behövs</string>
+    <string name="percent_price">%1$d% av den erbjudna ersättningen</string>
+    <string name="percent_price_additional">+ 1$d% av skillnaden mellan erbjudet pris och prutat pris.</string>
+    <string name="pay_to_see_doer">För att se Görarens kontaktuppgifter välj betalningsmetod.</string>
+    <string name="swish_not_installed">Swish App är inte installeradi!</string>
+
+    <!--MISC-->
+    <string name="phone">Phone: 0046 123 456 789</string>
+    <string name="contact_email">Email: info@jobdeal.com</string>
+    <string name="stay_in_touch">Håll kontakten</string>
+
+    <string name="no_reviews_yet">Inga betyg än.</string>
+    <string name="filter_textview">*User Användare som lagt in jobbtyp och område i önskelistan för meddelande när matchning uppstått. *Önskelista är en Premium produkt.</string>
+    <string name="permission_location">Vi behöver tillgång till din platsinformation för bästa användarupplevelse.</string>
+
+    <!-- PLURALS-->
+    <plurals name="years">
+        <item quantity="one">%1$d är</item>
+        <item quantity="two">%1$d år</item>
+        <item quantity="few">%1$d år</item>
+        <item quantity="many">%1$d år</item>
+        <item quantity="other">%1$d år</item>
+    </plurals>
+    <plurals name="months">
+        <item quantity="one">%1$d månad</item>
+        <item quantity="two">%1$d månader</item>
+        <item quantity="few">%1$d månader</item>
+        <item quantity="many">%1$d månader</item>
+        <item quantity="other">%1$d månader</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%1$d vecka</item>
+        <item quantity="two">%1$d veckor</item>
+        <item quantity="few">%1$d veckor</item>
+        <item quantity="many">%1$d veckor</item>
+        <item quantity="other">%1$d veckor</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%1$d dag</item>
+        <item quantity="two">%1$d dagar</item>
+        <item quantity="few">%1$d dagar</item>
+        <item quantity="many">%1$d dagar</item>
+        <item quantity="other">%1$d dagar</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d timme</item>
+        <item quantity="two">%1$d timmar</item>
+        <item quantity="few">%1$d timmar</item>
+        <item quantity="many">%1$d timmar</item>
+        <item quantity="other">%1$d timmar</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minut</item>
+        <item quantity="two">%1$d minuter</item>
+        <item quantity="few">%1$d minuter</item>
+        <item quantity="many">%1$d minuter</item>
+        <item quantity="other">%1$d minuter</item>
+    </plurals>
+
+
+    <string name="choose_photo_title">Välj foton</string>
+    <string name="choose_photo_desc">Vill du ta ett kort eller välja från kamerarullen?</string>
+    <string name="take_a_photo">Ta ett foto</string>
+
+    <string name="offending">Stötande</string>
+
+
+    <string name="sms_verification_description">Du kommer att få en verifikations kod via sms till ditt angivna mobilnummer.</string>
+    <string name="sms_resend">Skicka igen</string>
+    <string name="about_me_hint">Skriv något om dig själv...</string>
+    <string name="about_me">Om Mig</string>
+    <string name="verification">Verifikation</string>
+    <string name="verify">Verifiera</string>
+    <string name="mobile_number_changed">Vi måste verifiera ditt mobilnummer. Du kommer att få en kod via sms.</string>
+    <string name="home">Annonser</string>
+    <string name="avatar_image_mandatory">Profilbild krävs. Välj bild från kamerarulle, eller ta ett foto med kameran.</string>
+    <string name="delivery_job">Leverans-jobb</string>
+    <string name="delivery_job_description">*Om du behöver Leverans-jobb</string>
+    <string name="leave_a_comment">Lämna en commentar...</string>
+    <string name="show_help_on_way">Visa “Hjälp är på väg jobb” annonser</string>
+
+    <string name="choose_doer">Välj Görare</string>
+    <string name="choose_doer_desc">Är du säker på att du vill välja denna Utförare?</string>
+    <string name="help_on_way_desc">Du kan välja “Hjälp är på väg” så visas det i din annons och du slipper fler intresserade!</string>
+    <string name="choose">Välj</string>
+    <string name="help_on_the_way">Hjälp är på väg</string>
+    <string name="job_expired">Jobbet har utgått</string>
+    <string name="choose_ok">Du har valt %1$s som din Utförare.</string>
+
+    <string name="wish_list_desc">Om du lägger in en önskelista, får du en push så snart någon lägger ut ett job som stammer med den</string>
+    <string name="my_ads">Mina annonser</string>
+    <string name="my_deals">Sökta jobb</string>
+    <string name="call">Ring din utförare</string>
+    <string name="message">SMS:a din utförare</string>
+
+    <string name="active_jobs">Aktiva Jobb</string>
+    <string name="expired_jobs">Utgågna Jobb</string>
+
+    <string name="buyer_already_rated">Köpare är redan betygsatt</string>
+    <string name="doer_already_rated">Utförare är redan betygsatt</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit est vel leo luctus, vitae porttitor arcu volutpat. Mauris facilisis fermentum sapien sit amet tincidunt. Ut rhoncus diam lorem, a imperdiet nulla varius eu. Nam commodo arcu ac est porttitor. </string>
+
+    <string name="unlock_underbidders">Lås upp kontaktuppgifter på utförare som har erbjudit göra för lägre pris än det du erbjudit</string>
+    <string name="unlock">Lås upp</string>
+    <string name="lower_bid_offer">Lägre bud bud!</string>
+
+    <!-- TUTORIAL -->
+    <string name="tutorial">Hur det fungerar</string>
+    <string name="tutorial_1">Välj att skapa ett jobb eller sök ett själv. I flödet ser du alla annonser som ligger ute just nu. På kartan får du en överblick över var jobben finns.</string>
+    <string name="tutorial_2">Kika vem som annonserar kring dig. Har du hittat ett jobb för dig? Välj att ansöka för den angivna summan eller pruta för större chans att få jobbet.</string>
+    <string name="tutorial_3">Har du ett jobb som behöver utföras? Beskriv det här nedan och publicera det sedan för alla användare att se.\n\nKom ihåg att det är helt gratis att publicera jobb!</string>
+    <string name="tutorial_4">När du fått en eller flera ansökningar på din annons är det dags för dig att välja vem som får jobbet. För att få tillgång till jobbsökarnas information och kontaktuppgifter betalar du 10 % av annonsens värde. Du kan också välja att betala ytterligare 5 % för att låsa upp profilerna som prutat på summan - vilket ju i slutändan kan bli ett billigare val för dig som annonsör.</string>
+
+</resources>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".view.profile.ConfirmChooseActivity"
+    android:layout_centerInParent="true"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="12dp"
+    app:contentPadding="16dp"
+    android:layout_margin="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/ivClose"
+            android:padding="4dp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/colorText"
+            android:layout_marginTop="-8dp"
+            android:layout_marginEnd="-8dp"
+            android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:text="@string/choose_doer"
+        android:textAllCaps="true"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorText" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/tvTitle"
+            android:text="@string/choose_doer_desc"
+            android:textStyle="normal"
+            android:textSize="16dp"
+            android:textColor="@color/colorText" />
+
+        <RelativeLayout
+            android:id="@+id/rlHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_below="@+id/tvDesc"
+            android:background="@drawable/round_shape"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:visibility="gone"
+            >
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/smHelp"
+            android:text="@string/help_on_the_way" />
+
+        <TextView
+            android:id="@+id/tvDescHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/smHelp"
+            android:text="@string/help_on_way_desc"
+            android:textStyle="normal"
+            android:textColor="@color/colorTextSecondary" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChose"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/choose_doer"
+            android:layout_below="@+id/rlHelp"
+            app:backgroundTint="@color/colorDead"
+            app:cornerRadius="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

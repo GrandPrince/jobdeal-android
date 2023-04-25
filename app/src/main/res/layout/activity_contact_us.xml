@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".view.contact.ContactUs">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_tools_green">
+
+        <ImageView
+            android:id="@+id/ivLogoWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="128dp"
+            android:src="@drawable/job_deal_logo_white" />
+
+
+        <TextView
+            android:id="@+id/tvStayInTouch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivLogoWhite"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="52dp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/stay_in_touch"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="28dp" />
+
+
+        <TextView
+            android:id="@+id/tvContactMail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvStayInTouch"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="@string/contact_email"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvContactPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvContactMail"
+            android:layout_centerHorizontal="true"
+            android:text="@string/phone"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="52dp"
+            android:layout_marginRight="52dp"
+            android:layout_marginBottom="62dp"
+            android:layout_below="@id/tvContactPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_weight="0.33"
+                android:src="@drawable/facebook_icon"
+                android:layout_width="52dp"
+                android:layout_height="52dp" />
+
+            <ImageView
+                android:layout_weight="0.33"
+                android:src="@drawable/linkedin_icon"
+                android:layout_width="52dp"
+                android:layout_height="52dp" />
+            <ImageView
+                android:layout_weight="0.33"
+                android:src="@drawable/twitter_icon"
+                android:layout_width="52dp"
+                android:layout_height="52dp" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

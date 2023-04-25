@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    tools:context=".view.register.BankIdActivity"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:contentPadding="8dp"
+    android:layout_margin="8dp"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/bankid"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ivBankIdLogo"/>
+
+        <ProgressBar
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/pbBankId"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/ivBankIdLogo"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bankIdStart"
+            android:textColor="@color/colorTextSecondary"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_below="@+id/pbBankId"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVerify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:layout_below="@+id/tvHint"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="8dp"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

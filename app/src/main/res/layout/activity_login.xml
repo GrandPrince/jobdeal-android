@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/gradient"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    tools:context=".view.login.LoginActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="68dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo_full_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivLogo"
+                android:layout_centerHorizontal="true"
+                android:text="@string/hi"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <FrameLayout
+                android:id="@+id/flForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llTab"
+                android:layout_marginTop="-8dp"
+                android:animateLayoutChanges="false">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvLoginForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:contentPadding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:lines="1"
+                            android:paddingBottom="8dp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/password"
+                            android:imeOptions="actionGo"
+                            android:inputType="textPassword"
+                            android:lines="1"
+                            android:paddingBottom="8dp" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvRegisterForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp"
+                    app:contentPadding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:lines="1"
+                            android:paddingBottom="8dp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etSurname"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/surname"
+                            android:imeOptions="actionNext"
+                            android:inputType="textCapWords"
+                            android:lines="1"
+                            android:paddingBottom="8dp" />
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etMobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/mobile_number"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:lines="1"
+                            android:paddingBottom="8dp" />
+
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/llTab"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/ivLogo"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginRight="16dp"
+                android:animateLayoutChanges="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/login_tab_selector"
+                    android:gravity="center"
+                    android:text="@string/login"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvRegister"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/login_tab_selector"
+                    android:gravity="center"
+                    android:text="@string/register"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvForgot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/flForm"
+                android:layout_centerHorizontal="true"
+                android:alpha="0.6"
+                android:text="@string/forgot_pass"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tvEnterAsGuest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvForgot"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:alpha="0.6"
+                android:text="@string/enter_As_guest"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNext"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_below="@+id/tvEnterAsGuest"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:animateLayoutChanges="true"
+                android:text="@string/login"
+                app:backgroundTint="@color/colorDead"
+                app:cornerRadius="8dp" />
+
+            <ProgressBar
+                android:id="@+id/pbLogin"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignTop="@+id/btnNext"
+                android:layout_alignBottom="@+id/btnNext"
+                android:layout_centerHorizontal="true"
+                android:elevation="32dp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:elevation="32dp"
+        android:visibility="visible">
+
+
+
+        <VideoView
+            android:id="@+id/vvSplash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:id="@+id/placeholder"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            android:src="@drawable/background_tools_white" />
+
+        <ImageView
+            android:id="@+id/ivSplashLogo"
+            android:layout_width="168dp"
+            android:layout_height="168dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/jobdeal_logo_green" />
+
+
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
