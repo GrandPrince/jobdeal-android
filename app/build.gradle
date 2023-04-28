@@ -17,8 +17,8 @@ android {
         release {
             storeFile file("C:/Users/jaypersanchez/projects/jobdeal/jobdeal-android-main/jay-release-key.keystore")
             keyAlias 'jobdeal'
-            storePassword 'Ph1LL!fe'
-            keyPassword 'Ph1LL!fe'
+            storePassword 'pwd'
+            keyPassword 'pwd'
         }
     }
     buildTypes {
@@ -86,8 +86,8 @@ dependencies {
 }
 
 sourceSets {
-    main {
-        res.srcDirs += ['src/main/extra_res']
+    android.sourceSets.main {
+        res.srcDirs += ['src/main/res']
     }
 }
 apply plugin: 'com.google.gms.google-services'
