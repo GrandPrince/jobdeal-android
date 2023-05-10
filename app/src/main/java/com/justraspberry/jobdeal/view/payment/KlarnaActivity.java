@@ -56,7 +56,7 @@ public class KlarnaActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        klarnaCheckout = new KlarnaCheckout(KlarnaActivity.this, "https://dev.jobdeal.com/api/payment/klarna/checkout");
+        klarnaCheckout = new KlarnaCheckout(KlarnaActivity.this, "http://89.160.5.170:80/api/payment/klarna/checkout");
         klarnaCheckout.setSignalListener(new SignalListener() {
             @Override
             public void onSignal(String event, JSONObject jsonObject) {

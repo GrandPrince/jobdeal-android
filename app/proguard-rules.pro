@@ -3,7 +3,7 @@
 -dontwarn okio.**
 
 # Retrofit 2.X
-## https://square.github.io/retrofit/ ##
+## http://square.github.io/retrofit/ ##
 
 -dontwarn retrofit2.**
 -keep class retrofit2.** { *; }
@@ -43,7 +43,7 @@
 -dontwarn org.joda.convert.ToString
 
 # Glide specific rules #
-# https://github.com/bumptech/glide
+# http://github.com/bumptech/glide
 
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {

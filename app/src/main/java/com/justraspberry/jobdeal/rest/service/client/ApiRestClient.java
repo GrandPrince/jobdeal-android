@@ -90,7 +90,8 @@ import timber.log.Timber;
 
 public class ApiRestClient {
 
-    public static String BASE_URL = "https://dev.jobdeal.com/api/";
+    //public static String BASE_URL = "https://dev.jobdeal.com/api/";
+    public static String BASE_URL = "http://89.160.5.170:80/api/";
     private static final int TIMEOUT = 20;
     private static final ApiRestClient INSTANCE = new ApiRestClient();
 
@@ -115,12 +116,12 @@ public class ApiRestClient {
         okHttpClientBuilder.writeTimeout(TIMEOUT, TimeUnit.SECONDS);
 
         if (BuildConfig.DEBUG) {
-            BASE_URL = "https://dev.jobdeal.com/api/";
+            BASE_URL = "http://89.160.5.170:80/api/";
             HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
             httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             okHttpClientBuilder.addInterceptor(httpLoggingInterceptor);
         } else {
-            BASE_URL = "https://dev.jobdeal.com/api/";
+            BASE_URL = "http://89.160.5.170:80/api/";
         }
 
         //simulate long running request

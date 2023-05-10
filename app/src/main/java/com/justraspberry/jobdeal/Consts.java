@@ -57,5 +57,5 @@ public class Consts {
     public static final int RESULT_DELETE = 10;
 
     // TODO: 09/07/2020  Get real url for terms and conditions
-    public static final String TERMS_AND_CONDITION_URL = "https://prod.jobdeal.com/terms";
+    public static final String TERMS_AND_CONDITION_URL = "http://prod.jobdeal.com/terms";
 }

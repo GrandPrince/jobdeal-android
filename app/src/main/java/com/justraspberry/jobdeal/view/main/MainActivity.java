@@ -354,7 +354,7 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.tvWebsite)
     public void onWebsiteClick() {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://jobdeal.com"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://jobdeal.com"));
         startActivity(browserIntent);
     }
 

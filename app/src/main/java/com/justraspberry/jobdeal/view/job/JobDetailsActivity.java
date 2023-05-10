@@ -318,14 +318,14 @@ public class JobDetailsActivity extends AppCompatActivity {
     }
 
     public void shareJob() {
-        Task<ShortDynamicLink> shortDynamicLink = FirebaseDynamicLinks.getInstance().createDynamicLink().setLink(Uri.parse("https://jobdeal.com/job/" + job.getId().toString()))
-                .setDomainUriPrefix("https://jobdeal.page.link")
+        Task<ShortDynamicLink> shortDynamicLink = FirebaseDynamicLinks.getInstance().createDynamicLink().setLink(Uri.parse("http://jobdeal.com/job/" + job.getId().toString()))
+                .setDomainUriPrefix("http://jobdeal.page.link")
                 .setAndroidParameters(new DynamicLink.AndroidParameters.Builder("com.justraspberry.jobdeal").build())
                 .setIosParameters(new DynamicLink.IosParameters.Builder("jobdeal").build())
                 .setSocialMetaTagParameters(
                         new DynamicLink.SocialMetaTagParameters.Builder()
                                 .setTitle(getString(R.string.app_name))
-                                .setImageUrl(Uri.parse("https://prod.jobdeal.com/logo.png"))
+                                .setImageUrl(Uri.parse("http://prod.jobdeal.com/logo.png"))
                                 .setDescription(getString(R.string.jobdeal_description))
                                 .build())
                 .buildShortDynamicLink()

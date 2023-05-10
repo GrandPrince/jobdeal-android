@@ -198,7 +198,7 @@ public class PaymentActivity extends AppCompatActivity {
     public void onSwishRequestEvent(SwishRequestEvent event) {
         if (event.swishRequest != null) {
             refId = event.swishRequest.getRefId();
-            Uri scheme = Uri.parse("swish://paymentrequest?token=" + event.swishRequest.getRefId() + "&callbackurl=" + "https://jobdeal.com/swish/" + event.swishRequest.getPaymentId());
+            Uri scheme = Uri.parse("swish://paymentrequest?token=" + event.swishRequest.getRefId() + "&callbackurl=" + "http://jobdeal.com/swish/" + event.swishRequest.getPaymentId());
             Intent intent = new Intent(Intent.ACTION_VIEW, scheme);
             intent.setPackage("se.bankgirot.swish");
             startActivityForResult(intent, Consts.REQ_SWISH);
