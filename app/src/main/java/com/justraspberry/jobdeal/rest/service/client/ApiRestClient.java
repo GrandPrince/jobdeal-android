@@ -1,5 +1,6 @@
 package com.justraspberry.jobdeal.rest.service.client;
 
+import android.util.Log;
 import android.util.Pair;
 
 import com.google.android.gms.maps.model.LatLng;
@@ -90,7 +91,7 @@ import timber.log.Timber;
 
 public class ApiRestClient {
 
-    public static String BASE_URL = "https://dev.jobdeal.com/api/";
+    public static String BASE_URL = "http://dev.jobdeal.com/api/";
     private static final int TIMEOUT = 20;
     private static final ApiRestClient INSTANCE = new ApiRestClient();
 
@@ -115,12 +116,12 @@ public class ApiRestClient {
         okHttpClientBuilder.writeTimeout(TIMEOUT, TimeUnit.SECONDS);
 
         if (BuildConfig.DEBUG) {
-            BASE_URL = "https://dev.jobdeal.com/api/";
+            BASE_URL = "http://dev.jobdeal.com/api/";
             HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
             httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             okHttpClientBuilder.addInterceptor(httpLoggingInterceptor);
         } else {
-            BASE_URL = "https://dev.jobdeal.com/api/";
+            BASE_URL = "http://dev.jobdeal.com/api/";
         }
 
         //simulate long running request
@@ -1221,10 +1222,12 @@ public class ApiRestClient {
 
     public void requestVerification(User user) {
         Call<User> call = apiInterface.requestVerification(user);
-
+        Log.e("here", "here");
+        Log.e("here", user.toString());
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
+                Log.e("here1", response.toString());
                 if (response.isSuccessful()) {
                     EventBus.getDefault().post(new SendVerificationEvent(response.body()));
                 } else {
@@ -1234,6 +1237,7 @@ public class ApiRestClient {
 
             @Override
             public void onFailure(Call<User> call, Throwable t) {
+                Log.e("here2", t.toString());
                 EventBus.getDefault().post(new SendVerificationEvent(null));
             }
         });
