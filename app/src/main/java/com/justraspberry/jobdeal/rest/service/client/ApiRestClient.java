@@ -17,6 +17,7 @@ import com.justraspberry.jobdeal.model.FilterBody;
 import com.justraspberry.jobdeal.model.Job;
 import com.justraspberry.jobdeal.model.Notification;
 import com.justraspberry.jobdeal.model.Payment;
+import com.justraspberry.jobdeal.model.Price;
 import com.justraspberry.jobdeal.model.PriceCalculation;
 import com.justraspberry.jobdeal.model.PriceCalculationRequest;
 import com.justraspberry.jobdeal.model.Rate;
@@ -63,6 +64,7 @@ import com.justraspberry.jobdeal.rest.service.model.BankIdAuth;
 import com.justraspberry.jobdeal.rest.service.model.BankIdCollect;
 import com.justraspberry.jobdeal.rest.service.model.Email;
 import com.justraspberry.jobdeal.rest.service.model.ImageUploadResponse;
+import com.justraspberry.jobdeal.rest.service.model.Info;
 import com.justraspberry.jobdeal.rest.service.model.JobResponse;
 import com.justraspberry.jobdeal.rest.service.model.KlarnaRequest;
 import com.justraspberry.jobdeal.rest.service.model.LoginRegisterResponse;
@@ -116,12 +118,14 @@ public class ApiRestClient {
         okHttpClientBuilder.writeTimeout(TIMEOUT, TimeUnit.SECONDS);
 
         if (BuildConfig.DEBUG) {
-            BASE_URL = "http://dev.jobdeal.com/api/";
+            //BASE_URL = "http://dev.jobdeal.com/api/";         //Kayson comment
+            BASE_URL = "http://api-upgrade.jobdeal.com/api/";   //Kayson add
             HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
             httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
             okHttpClientBuilder.addInterceptor(httpLoggingInterceptor);
         } else {
-            BASE_URL = "http://dev.jobdeal.com/api/";
+            //BASE_URL = "http://dev.jobdeal.com/api/";         //Kayson comment
+            BASE_URL = "http://api-upgrade.jobdeal.com/api/";   //Kayson add
         }
 
         //simulate long running request
@@ -151,11 +155,29 @@ public class ApiRestClient {
         loginCall.enqueue(new Callback<LoginRegisterResponse>() {
             @Override
             public void onResponse(Call<LoginRegisterResponse> call, Response<LoginRegisterResponse> response) {
-                if (response.isSuccessful()) {
-                    App.getInstance().setInfo(response.body().getInfo());
-                    App.getInstance().setPrices(response.body().getPrices());
-                    App.getInstance().setWishlistBody(response.body().getWishlist());
-                    EventBus.getDefault().postSticky(new LoginEvent(response.body()));
+                //Kayson change
+                //if (response.isSuccessful()) {
+                //    App.getInstance().setInfo(response.body().getInfo());
+                    Info tmpInfo = new Info();
+                    App.getInstance().setInfo(tmpInfo);
+                //    App.getInstance().setPrices(response.body().getPrices());
+
+                    Price tmpPrice = new Price();
+                    App.getInstance().setPrices(tmpPrice);
+                //    App.getInstance().setWishlistBody(response.body().getWishlist());
+                    FilterBody tmpWish = new FilterBody();
+                    App.getInstance().setWishlistBody(tmpWish);
+
+
+                //    EventBus.getDefault().postSticky(new LoginEvent(response.body()));
+                    LoginRegisterResponse res = new LoginRegisterResponse();
+                    res.setInfo(tmpInfo);
+                    res.setPrices(tmpPrice);
+                    res.setWishlist(tmpWish);
+                    res.setUser(user);
+                    res.setJwt("abcd");
+                    EventBus.getDefault().postSticky(new LoginEvent(res));
+                    /*
                 } else {
                     Timber.e("Login not seccessful!");
                     try {
@@ -165,6 +187,8 @@ public class ApiRestClient {
                         EventBus.getDefault().postSticky(new LoginEvent(null, null, response.code()));
                     }
                 }
+
+                     */
             }
 
             @Override
@@ -1228,11 +1252,12 @@ public class ApiRestClient {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
                 Log.e("here1", response.toString());
-                if (response.isSuccessful()) {
+                //Kayson change
+                //if (response.isSuccessful()) {
                     EventBus.getDefault().post(new SendVerificationEvent(response.body()));
-                } else {
-                    EventBus.getDefault().post(new SendVerificationEvent(null));
-                }
+                //} else {
+                //    EventBus.getDefault().post(new SendVerificationEvent(null));
+                //}
             }
 
             @Override
